@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-barlow-condensed: 'Barlow Condensed', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-black antialiased font-sans selection:bg-brand-yellow selection:text-brand-black;
+  }
+}
+
+/* Industrial angled cut accents and stripes */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.clip-diagonal-rev {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-badge {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-industrial-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+}
+
+.clip-hero-block {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+}
+
+/* Hazard diagonal stripes bar */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #F7B801,
+    #F7B801 12px,
+    #0D0E11 12px,
+    #0D0E11 24px
+  );
+}
+
+.hazard-stripes-subtle {
+  background: repeating-linear-gradient(
+    -45deg,
+    #F7B801,
+    #F7B801 6px,
+    #16181D 6px,
+    #16181D 12px
+  );
+}
+
+/* Technical grid overlays */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 14, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 14, 17, 0.05) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.bg-tech-grid-yellow {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 14, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 14, 17, 0.08) 1px, transparent 1px);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0E11;
+}
+::-webkit-scrollbar-thumb {
+  background: #F7B801;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5A800;
+}
